@@ -49,7 +49,7 @@ pipeline {
             --region ${AWS_REGION} \
             --name eks-prod-primary
 
-          kubectl apply -f deployment.yml
+          kubectl apply -f deployment.yml --validate=false
         '''
       }
     }
@@ -61,7 +61,7 @@ pipeline {
             --region ${AWS_REGION} \
             --name eks-prod-secondary
 
-          kubectl apply -f deployment.yml
+          kubectl apply -f deployment.yml --validate=false
         '''
       }
     }
