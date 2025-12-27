@@ -46,7 +46,7 @@ pipeline {
       steps {
         sh '''
           kubectl config use-context iam-root-account@eks-prod-primary.ap-south-1.eksctl.io
-          kubectl apply -f deployment.yaml
+          kubectl apply -f deployment.yml
         '''
       }
     }
@@ -55,7 +55,7 @@ pipeline {
       steps {
         sh '''
           kubectl config use-context iam-root-account@eks-prod-secondary.ap-south-1.eksctl.io
-          kubectl apply -f deployment.yaml
+          kubectl apply -f deployment.yml
         '''
       }
     }
